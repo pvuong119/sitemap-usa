@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USA Cabinets Outlet Sitemap</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Be+Vietnam+Pro:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+  /* Layout: một cây sơ đồ chính đọc từ trên xuống, mỗi nhánh menu là một cột thẻ; phần chú ý nằm cuối */
+  :root {
+    --bg: #F6F5F1;
+    --panel: #FFFFFF;
+    --ink: #1B2333;
+    --muted: #5E6675;
+    --line: #D9D6CC;
+    --blue: #2463EB;
+    --blue-soft: #E7EEFD;
+    --yellow: #FCDF6E;
+    --warn: #B4540A;
+    --warn-soft: #FDF0E2;
+    --off: #8B8F98;
+    --f-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+    --f-body: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+    --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12161E; --panel: #1A202B; --ink: #E8EBF1; --muted: #9AA3B2; --line: #2D3543;
+      --blue: #7FA6FF; --blue-soft: #1E2A44; --yellow: #FCDF6E; --warn: #F3A65C; --warn-soft: #2E2418; --off: #6E7584;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12161E; --panel: #1A202B; --ink: #E8EBF1; --muted: #9AA3B2; --line: #2D3543;
+    --blue: #7FA6FF; --blue-soft: #1E2A44; --yellow: #FCDF6E; --warn: #F3A65C; --warn-soft: #2E2418; --off: #6E7584;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-block: 40px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 40px; }
+
+  header { display: grid; gap: 10px; }
+  .kicker { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; color: var(--muted); }
+  h1 { margin: 0; font-family: var(--f-display); font-weight: 800; font-size: clamp(30px, 5vw, 46px); line-height: 1.05; letter-spacing: -.01em; text-wrap: balance; }
+  h1 mark { background: linear-gradient(transparent 58%, var(--yellow) 58%); color: inherit; padding: 0 .08em; }
+  .lead { margin: 0; max-width: 62ch; color: var(--muted); }
+
+  .stats { display: flex; flex-wrap: wrap; gap: 10px 28px; padding: 16px 0 0; border-top: 1px solid var(--line); }
+  .stat { display: flex; align-items: baseline; gap: 8px; }
+  .stat b { font-family: var(--f-display); font-size: 28px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .stat span { color: var(--muted); font-size: 14px; }
+
+  h2 { margin: 0 0 14px; font-family: var(--f-display); font-size: 22px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+  h2 small { font-family: var(--f-mono); font-size: 12px; font-weight: 500; color: var(--muted); }
+  .note { margin: -6px 0 16px; color: var(--muted); font-size: 14px; max-width: 70ch; }
+
+  /* Gốc cây */
+  .root { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--bg); font-family: var(--f-display); font-weight: 700; }
+  .root code { font-family: var(--f-mono); font-size: 12px; opacity: .7; font-weight: 500; }
+  .trunk { margin-left: 22px; border-left: 2px solid var(--line); padding: 18px 0 0 22px; }
+
+  .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; align-items: start; }
+  .branch { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px 16px; min-width: 0; }
+  .branch > .bh { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+  .branch > .bh strong { font-family: var(--f-display); font-size: 16px; }
+  .tag { font-family: var(--f-mono); font-size: 10.5px; padding: 2px 7px; border-radius: 99px; background: var(--blue-soft); color: var(--blue); white-space: nowrap; }
+  .tag.page { background: color-mix(in srgb, var(--yellow) 30%, transparent); color: var(--ink); }
+
+  ul.tree { list-style: none; margin: 0; padding: 0; }
+  ul.tree ul { list-style: none; margin: 2px 0 4px 6px; padding-left: 12px; border-left: 1px dashed var(--line); }
+  ul.tree li { padding: 3px 0; font-size: 14px; }
+  ul.tree li > em { font-style: normal; font-weight: 600; }
+  ul.tree .sub { color: var(--muted); font-size: 13px; }
+  .off { color: var(--off); text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--off) 60%, transparent); }
+  .flag { color: var(--warn); font-weight: 600; }
+
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .box { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; min-width: 0; }
+  .box h3 { margin: 0 0 8px; font-family: var(--f-display); font-size: 16px; }
+  .box p { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 12.5px; padding: 3px 9px; border-radius: 99px; border: 1px solid var(--line); background: var(--bg); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13px; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+  .issues { display: grid; gap: 10px; }
+  .issue { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; background: var(--warn-soft); border-radius: 10px; padding: 12px 16px; }
+  .issue i { font-style: normal; font-family: var(--f-mono); font-size: 11px; font-weight: 500; color: var(--warn); border: 1px solid var(--warn); border-radius: 6px; padding: 1px 6px; margin-top: 3px; }
+  .issue p { margin: 0; font-size: 14px; }
+  .issue p b { font-weight: 600; }
+  code { font-family: var(--f-mono); font-size: .85em; overflow-wrap: anywhere; }
+
+  footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
+  @media (max-width: 560px) { .trunk { margin-left: 10px; padding-left: 12px; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="kicker">usacabinetsoutlet.com · lấy từ Shopify ngày 03/11/2026</div>
+    <h1>Sơ đồ <mark>toàn bộ website</mark> USA Cabinets Outlet</h1>
+    <p class="lead">Đọc từ trên xuống: menu chính khách thấy đầu tiên, rồi chân trang, các trang ẩn không có trong menu, và cuối cùng là mấy chỗ đang lỗi cần sửa.</p>
+    <div class="stats">
+      <div class="stat"><b>868</b><span>sản phẩm</span></div>
+      <div class="stat"><b>61</b><span>bộ sưu tập</span></div>
+      <div class="stat"><b>131</b><span>trang (page)</span></div>
+      <div class="stat"><b>44</b><span>bài blog</span></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>1. Menu chính <small>main-menu</small></h2>
+    <div class="legend" style="margin-bottom:14px">
+      <span><span class="tag">collection</span> trang danh sách sản phẩm</span>
+      <span><span class="tag page">page</span> trang nội dung</span>
+      <span><span class="off">gạch ngang</span> = chưa bật (ẩn)</span>
+    </div>
+    <div class="root">Trang chủ <code>/</code></div>
+    <div class="trunk">
+      <div class="menu">
+        <div class="branch">
+          <div class="bh"><strong>RTA</strong><span class="tag">collection</span></div>
+          <ul class="tree">
+            <li>All RTA cabinets</li>
+            <li>10x10 Kitchen Layout</li>
+            <li>Base</li>
+            <li>Wall</li>
+            <li>Pantry</li>
+            <li>Vanity</li>
+            <li>Accessories</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="bh"><strong>Kitchen Cabinets</strong><span class="tag">collection</span></div>
+          <ul class="tree">
+            <li><em>Color</em>
+              <ul><li class="sub">White · Gray · Natural wood · Green · Navy Blue · Dark Wood · Black</li></ul>
+            </li>
+            <li><em>Style</em>
+              <ul><li class="sub">Shaker · Slim Shaker · Flat Panel · Classic</li></ul>
+            </li>
+            <li><em>Finishes</em>
+              <ul><li class="sub">Painted · Ready to Paint · High Gloss · Veneer</li></ul>
+            </li>
+            <li><em>Construction</em>
+              <ul><li class="sub">Framed (Mỹ) · Frameless (Châu Âu)</li></ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="bh"><strong>Cabinet Samples</strong><span class="tag page">page</span></div>
+          <ul class="tree">
+            <li>Đặt cánh mẫu $39</li>
+            <li class="sub">Why Order Samples · Showroom · Why Choose Us</li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="bh"><strong>Resources</strong><span class="tag page">page</span></div>
+          <ul class="tree">
+            <li><em>Công ty</em>
+              <ul><li class="sub">About Us · Catalogs · Gallery · Blogs · FAQs</li></ul>
+            </li>
+            <li><em>Khách sỉ</em>
+              <ul><li class="sub">Builders &amp; Contractors → Trade program</li></ul>
+            </li>
+            <li><em>Báo giá</em>
+              <ul><li class="sub">Get a Quick Quote</li></ul>
+            </li>
+            <li><em>Chính sách</em>
+              <ul><li class="sub">Warranty · Return · Replacement Part · Payment &amp; Delivery · Privacy · Terms</li></ul>
+            </li>
+            <li><em>Service Areas</em>
+              <ul><li class="sub">Texas · Anna · Dallas · Fort Worth · Austin · Houston</li></ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="branch">
+          <div class="bh"><strong>Contact</strong><span class="tag page">page</span></div>
+          <ul class="tree">
+            <li>Form liên hệ</li>
+            <li class="sub">Mail form về info@ (Zoho)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Chân trang <small>footer menus</small></h2>
+    <p class="note">Chân trang lặp lại các trang chính. Có 4 menu chân trang, phần lớn trùng nhau.</p>
+    <div class="pair">
+      <div class="box">
+        <h3>Company</h3>
+        <ul class="tree"><li>Home · About us · Our Service · Builders &amp; Contractors</li><li><span class="off">How It Works</span> <span class="flag">(trang đang ẩn)</span></li><li>Blog → <code>/blogs/news</code></li></ul>
+      </div>
+      <div class="box">
+        <h3>Products</h3>
+        <ul class="tree"><li>Kitchen Cabinets · Vanities · Gallery</li></ul>
+      </div>
+      <div class="box">
+        <h3>Support</h3>
+        <ul class="tree"><li>Warranty · Payment &amp; Delivery · Terms · Privacy</li></ul>
+      </div>
+      <div class="box">
+        <h3>Tài khoản khách</h3>
+        <ul class="tree"><li>Orders · Profile</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Trang không có trong menu <small>vào bằng nút / link</small></h2>
+    <p class="note">Các trang này đang bật nhưng khách chỉ tới được qua nút CTA, banner hoặc link trong bài.</p>
+    <div class="pair">
+      <div class="box">
+        <h3>Bán hàng &amp; báo giá</h3>
+        <div class="chips">
+          <span class="chip">Get Free Kitchen Layout</span>
+          <span class="chip">Kitchen Estimator</span>
+          <span class="chip">10x10 Kitchen Package</span>
+          <span class="chip">Sales &amp; Promotions</span>
+          <span class="chip">Start Your Journey</span>
+          <span class="chip">Wholesale Kitchen Cabinets</span>
+          <span class="chip">Thank You – Quote</span>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Chính sách phụ</h3>
+        <div class="chips">
+          <span class="chip">Exchanges &amp; Cancellation</span>
+          <span class="chip">Our Service</span>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Gallery <span class="tag">collection</span></h3>
+        <p>Trang lookbook đang làm: H1 → Kitchen (lọc style/màu) → phòng khác → CTA → Showroom/Online → Need assistance → Blog → FAQ.</p>
+      </div>
+      <div class="box">
+        <h3>Glossary (từ điển tủ bếp)</h3>
+        <p>1 trang mục lục và khoảng 60 trang thuật ngữ nhỏ (Base Cabinet, Cam Lock, Alder Wood…), chủ yếu để làm SEO.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Blog <small>3 blog</small></h2>
+    <div class="pair">
+      <div class="box"><h3>News · 42 bài</h3><p>Blog chính, có nhiều bài nhất. Chân trang trỏ về đây.</p></div>
+      <div class="box"><h3>Resources · 2 bài</h3><p>Menu chính "Blogs" trỏ về đây.</p></div>
+      <div class="box"><h3>Blog · 0 bài</h3><p>Trống.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Trang SEO thành phố <small>đang ẩn</small></h2>
+    <p class="note">Khoảng 25 trang landing theo thành phố đã làm nhưng chưa bật, nên Google và khách chưa thấy.</p>
+    <div class="chips">
+      <span class="chip off">Dallas</span><span class="chip off">Fort Worth</span><span class="chip off">Plano</span><span class="chip off">Frisco</span><span class="chip off">McKinney</span><span class="chip off">Allen</span><span class="chip off">Denton</span><span class="chip off">Lewisville</span><span class="chip off">Flower Mound</span><span class="chip off">Carrollton</span><span class="chip off">Arlington</span><span class="chip off">Prosper</span><span class="chip off">Celina</span><span class="chip off">Melissa</span><span class="chip off">Anna</span><span class="chip off">Van Alstyne</span><span class="chip off">Princeton</span><span class="chip off">Gunter</span><span class="chip off">Sherman</span><span class="chip off">Durant OK</span><span class="chip off">Oklahoma City</span><span class="chip off">Odessa</span><span class="chip off">Midland</span><span class="chip off">Lubbock</span><span class="chip off">Texas</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Chỗ cần xem lại</h2>
+    <div class="issues">
+      <div class="issue"><i>LỖI</i><p><b>How It Works</b> có trong chân trang nhưng trang đang ẩn, nên khách bấm vào sẽ ra trang lỗi 404.</p></div>
+      <div class="issue"><i>LỆCH</i><p><b>Blog bị chia đôi:</b> menu chính trỏ về <code>Resources</code> (2 bài), chân trang trỏ về <code>News</code> (42 bài). Khách bấm menu chính chỉ thấy 2 bài.</p></div>
+      <div class="issue"><i>LỆCH</i><p><b>Gallery có 2 link khác nhau:</b> menu là <code>/collections/gallery/gallery</code>, chân trang là <code>/collections/gallery</code>. Nên dùng chung 1 link.</p></div>
+      <div class="issue"><i>KIỂM TRA</i><p><b>Service Areas</b> trỏ tới <code>/pages/local/dallas</code>, <code>/pages/state/texas</code>…, nhưng các trang thành phố thật lại có địa chỉ khác và đang ẩn. Nên bấm thử từng link xem có ra trang không.</p></div>
+      <div class="issue"><i>DỌN</i><p><b>Blog "Blog"</b> trống, có thể xoá cho gọn.</p></div>
+    </div>
+  </section>
+
+  <footer>Số liệu lấy trực tiếp từ Shopify (menu, trang, blog, số sản phẩm và bộ sưu tập). Trang tài khoản, giỏ hàng, tìm kiếm là trang mặc định của Shopify nên không vẽ ở đây.</footer>
+</div>
+</body>
+</html>
